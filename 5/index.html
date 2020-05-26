@@ -22,8 +22,8 @@
 	<script>
 		let count = 3;
 		function insert_Row() {
-			let sampleTable = document.getElementById('sampleTable').querySelector('tbody');
-			let cell = document.createElement('tr');
+			const sampleTable = document.getElementById('sampleTable').querySelector('tr').parentElement;
+			const cell = document.createElement('tr');
 			cell.innerHTML = `<td>Row${count} cell1</td> <td>Row${count} cell2</td>`;
 			sampleTable.appendChild(cell);
 			count++;

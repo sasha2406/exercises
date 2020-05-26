@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+
+	<script>
+
+		const linksAmount = 20;
+		
+		document.addEventListener("DOMContentLoaded", loadCB);
+		
+		function loadCB (){
+			drawLinks(linksAmount);
+			setTimeout(colorLinks, 1000);
+		};
+
+		function createLinks(amount) {
+			const fragment = document.createDocumentFragment();
+			for (let i = 1; i <= amount; i++) {
+				const paragraph = document.createElement('p');
+				paragraph.innerHTML = `<a href="#">Link${i}</a>`;
+				fragment.appendChild(paragraph);
+			};
+			return fragment;
+		};
+
+		function colorLinks() {
+			document.querySelectorAll('a').forEach(link => link.style.background = 'red');
+		};
+
+		function drawLinks(amount) {
+			const fragment = createLinks(amount);
+			document.body.appendChild(fragment);
+		};
+		
+
+	</script>
+</body>
+
+</html>
