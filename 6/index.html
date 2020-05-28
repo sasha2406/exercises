@@ -24,6 +24,20 @@
 	<form>
 		<input type="button" onclick="changeContent()" value="Change content">
 	</form>
+
+	<script>
+
+		function changeContent() {
+			const line = prompt("Введите номер строки от 1 до 3", 1);
+			const column = prompt("Введите номер столбца от 1 до 2", 1);
+			const content = prompt("Введите текст ячейки", "text");
+			const selectedLine = document.getElementById('myTable').querySelectorAll('tr')[line-1];
+			const selectedCell = selectedLine.querySelectorAll('td')[column-1];
+			selectedCell.innerText = content;
+		}
+
+	</script>
+
 </body>
 
 </html>
