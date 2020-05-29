@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style type="text/css">
+		body {
+			margin: 30px;
+		}
+	</style>
+
+</head>
+
+<body>
+	<table id="myTable" border="1">
+	</table>
+	<form>
+		<input type="button" onclick="createTable()" value="Create the table">
+	</form>
+
+	<script>
+
+		function createTable() {
+			const rows = prompt("Введите количество строк таблицы", 1);
+			const columns = prompt("Введите количество столбцов таблицы", 1);
+
+			if (document.querySelector('tbody') !== null) {
+				document.querySelector('tbody').remove();
+			}
+			
+			document.getElementById('myTable').appendChild(document.createElement('tbody'));
+			const myTable = document.getElementById('myTable').querySelector('tbody');
+
+			for (let i = 0; i < rows; i++) {
+				myTable.innerHTML += "<tr></tr>";
+				
+				let lastElem = myTable.querySelectorAll('tr')[myTable.querySelectorAll('tr').length - 1];
+				for (let k = 0; k < columns; k++) {
+					lastElem.innerHTML += `<td>Row-${i + 1} Column-${k + 1}</td>`;
+				}
+			}
+		}
+
+	</script>
+
+</body>
+
+</html>
+
+<!-- Write a JavaScript function that creates a table, accept row, column numbers from the user, and input row-column number as content (e.g. Row-0 Column-0) of a cell. -->
