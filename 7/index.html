@@ -50,3 +50,35 @@
 </html>
 
 <!-- Write a JavaScript function that creates a table, accept row, column numbers from the user, and input row-column number as content (e.g. Row-0 Column-0) of a cell. -->
+<!-- 
+	Во первых - тоже с формой
+
+for (let i = 0; i < rows; i++) {
+				myTable.innerHTML += "<tr></tr>";
+
+				let lastElem = myTable.querySelectorAll('tr')[myTable.querySelectorAll('tr').length - 1];
+				for (let k = 0; k < columns; k++) {
+					lastElem.innerHTML += `<td>Row-${i + 1} Column-${k + 1}</td>`;
+				}
+			}
+
+Создание нового ряда лучше сделать фрагментом а не добавлять иннерШТМЛ а потом его искать
+Фрагментом -  создать тр, напихать туда текст а потом заапендить в таблицу
+И создание ряда сделать отдельной функцией
+ЧТоб было примено так:
+
+for (let i = 0; i < rows; i++) {
+				createTableRow(some_params)
+				}
+			}
+
+или
+
+for (let i = 0; i < rows; i++) {
+const tr = createTableRow(some_params);
+				myTable. appendChild(tr)
+				}
+			}
+
+В общем желательно на функции побить
+ -->

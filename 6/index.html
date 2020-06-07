@@ -22,6 +22,16 @@
 		</tr>
 	</table>
 	<form>
+		<hr>
+		<div>
+			<p style="margin-bottom: 5px;">Enter line number:</p>
+			<input type="number" name="line" id="" style="width: 50px;">
+		</div>
+		<div>
+			<p style="margin-bottom: 5px;">Enter column number:</p>
+			<input type="number" name="column" id="" style="width: 50px;">
+		</div>
+		<hr>
 		<input type="button" onclick="changeContent()" value="Change content">
 	</form>
 
@@ -31,8 +41,8 @@
 			const line = prompt("Введите номер строки от 1 до 3", 1);
 			const column = prompt("Введите номер столбца от 1 до 2", 1);
 			const content = prompt("Введите текст ячейки", "text");
-			const selectedLine = document.getElementById('myTable').querySelectorAll('tr')[line-1];
-			const selectedCell = selectedLine.querySelectorAll('td')[column-1];
+			const selectedLine = document.getElementById('myTable').querySelectorAll('tr')[line - 1];
+			const selectedCell = selectedLine.querySelectorAll('td')[column - 1];
 			selectedCell.innerText = content;
 		}
 
@@ -43,3 +53,19 @@
 </html>
 
 <!-- Write a JavaScript function that accept row, column, (to identify a particular cell) and a string to update the content of that cell. -->
+
+<!--
+По 6 - было бы круто, если б ты сделал не промптами
+А наклепал форму где будет 2 инпута
+И кнопка отправить
+По нажатию этой кнопки (По сабмиту формы)
+Чтоб менялся текст
+По хорошему - это
+const selectedLine = document.getElementById('myTable').querySelectorAll('tr')[line-1];
+			const selectedCell = selectedLine.querySelectorAll('td')[column-1];
+			selectedCell.innerText = content;
+надо вынести в отдельную функцию
+Которая будет называться например
+chabgeCellText(x, y, text)
+Типа одна функция делает одно действие
+-->
