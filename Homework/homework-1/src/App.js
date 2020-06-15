@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css';
-import InputConponent from './InputConponent';
+import Form from './Form';
 
 function App() {
   return (
     <div className="App">
 		 <p>Enter your text:</p>
-		 <InputConponent />
+		 <Form />
+
     </div>
   );
 }
