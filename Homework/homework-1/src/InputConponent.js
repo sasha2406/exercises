@@ -8,6 +8,7 @@ const Input = () => {
 
 	// const clickButton = useCallback(
 	// 	() => {
+        //              content = inputValue;
 	// 		console.log('work');
 	// 	}, []
 	// );
