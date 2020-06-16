@@ -1,0 +1,11 @@
+.app-wrapper-content {
+	display: inline-block;
+	width: 74%;
+	box-sizing: border-box;
+	background-color: #a6ff0056;
+	margin-top: 10px;
+	margin-left: 1%;
+	min-height: 500px;
+	border-radius: 5px;
+	padding: 10px;
+}

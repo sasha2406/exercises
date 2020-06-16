@@ -1,0 +1,13 @@
+header {
+	background: #487922;
+}
+
+.top-bar {
+	padding: 0;
+	font-size: 12px;
+	border-bottom: .4 solid #3b621c;
+	min-height: 40px;
+}
+.site-title {
+	color: #ffffff;
+}

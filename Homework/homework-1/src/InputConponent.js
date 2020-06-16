@@ -1,23 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import './InputConponent.css'
 
 const Input = () => {
-
 	const [inputValue, setInputValue] = useState('');
 	const [content, setContent] = useState('');
 
-	// const clickButton = useCallback(
-	// 	() => {
-	// 		console.log('work');
-	// 	}, []
-	// );
+	const clickButton = useCallback(
+		() => {
+			setContent(inputValue);
+			console.log('work');
+		}, [inputValue]
+	);
+
+	const onChange = (e) => { setInputValue(e.target.value) }
+	// const onClick = () => { setContent(inputValue) };
 
 	return (
 		<div className="input-block">
-			<input type="text" onChange={(e) => { setInputValue(e.target.value) }} />
+			<input type="text" onChange={onChange} />
 			<div>{inputValue}</div>
 			<div className="button-block">
-				<button onClick={() => { setContent(inputValue) }}>Push me</button>
+				<button onClick={clickButton}>Push me</button>
 			</div>
 			<div className="text-block">
 				<p>Output text:</p>
