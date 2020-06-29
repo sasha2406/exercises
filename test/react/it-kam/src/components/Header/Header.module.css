@@ -1,0 +1,12 @@
+.header {
+	display: block;
+	background-color: #ffac2f;
+	/* background-color: #2269cc7c; */
+	border-radius: 5px;
+
+}
+
+.header img {
+	width: 50px;
+	margin: 20px;
+}

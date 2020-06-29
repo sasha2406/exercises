@@ -1,0 +1,26 @@
+.nav {
+	box-sizing: border-box;
+	display: inline-block;
+	width: 25%;
+	min-height: 500px;
+	background-color: #ff5c5ca1;
+	margin-top: 10px;
+	vertical-align: top;
+	padding: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 25px;
+	border-radius: 5px;
+}
+.item a {
+	display: block;
+	height: 100%;
+	color: #000000;
+	text-decoration: none;
+}
+.item .activeLink {
+	color: #ffffff;
+}
+.item:hover {
+	color: #ffffff;
+	background-color: aqua;
+}
