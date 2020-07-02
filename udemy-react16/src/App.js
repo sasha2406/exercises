@@ -1,15 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 
-const [personState, setPersonState] = useState({
-  persons: [
-    { name: 'newName', age: 28 },
-    { name: 'Manu', age: 29 },
-    { name: 'Stephanie', age: 27 }
-  ]
-})
-
-const app = (props) => {
+const App = (props) => {
   return (
     <div className="app-wrapper">
       <Header />
@@ -20,13 +12,10 @@ const app = (props) => {
         <Route path='/profile'
           render={() => <Profile
             profilePage={props.state.profilePage}
-            dispatch={props.dispatch}
-          />
-          }
-        />
+            dispatch={props.dispatch} />} />
       </div>
     </div>
   );
 }
 
-export default app;
+export default App;
